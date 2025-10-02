@@ -20,9 +20,9 @@ def create_grid():
         except ValueError:
             print ("The size must be an integer")
         
-    for _ in range(int(size)):
-        grid= [[random.randint(0, 1) for _ in range(int(size))] for _ in range(int(size))]
+    grid = [[random.randint(0, 1) for _ in range(size)] for _ in range(size)]
 
-        os.system("cls" if os.name == "nt" else "clear")
-        printgrid(grid)
+    os.system("cls" if os.name == "nt" else "clear")
+    printgrid(grid)
+    return grid
         
