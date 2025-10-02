@@ -1,19 +1,28 @@
 import os
 import random
 
-def afficher(grille):
-    for ligne in grille:
-        print("".join("█" if c else " " for c in ligne))
+def printgrid(grid):
+    for row in grid:
+        print("".join("██" if c else "  " for c in row))
     print()
 
-if __name__ == "__main__":
+def create_grid():
     
-    grille=[]
+    grid=[]
     
-    x=input("Choisissez la taille de la grille:")
-    for _ in range(int(x)):
-        grille= [[random.randint(0, 1) for _ in range(int(x))] for _ in range(int(x))]
+    while True:
+        try:
+            size = int (input ("Choose the size of the grid (3-50):"))
+            if size < 3 or size > 50:
+                print ("Invalid Number")
+            else:
+                break
+        except ValueError:
+            print ("The size must be an integer")
+        
+    for _ in range(int(size)):
+        grid= [[random.randint(0, 1) for _ in range(int(size))] for _ in range(int(size))]
 
         os.system("cls" if os.name == "nt" else "clear")
-        afficher(grille)
+        printgrid(grid)
         
