@@ -24,6 +24,7 @@ def main():
         turn += 1
 
         time.sleep(0.2)
+        
 
 if __name__ == "__main__":
     main()
