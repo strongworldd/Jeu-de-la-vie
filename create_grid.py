@@ -25,4 +25,3 @@ def create_grid():
     os.system("cls" if os.name == "nt" else "clear")
     printgrid(grid)
     return grid
-        
