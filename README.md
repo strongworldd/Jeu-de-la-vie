@@ -34,6 +34,9 @@ Pour exécuter le projet, vous devez avoir installé sur votre machine :
 2. Exécutez la commande :
    ```bash
    python main.py
+- ou
+   ```bash
+   python3 main.py
    
 ---
 
