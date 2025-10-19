@@ -7,19 +7,28 @@ from load_grid import load_grid
 from savestate import save_grid
 
 def main():
-    reload = input("Do you want to load a saved grid? (y/n): ").strip().lower()
-    if reload == 'y':
-        grid = load_grid()
-        time.sleep(1.5)
-        if grid is None:
-            print("No grid has been saved. Creating a new grid instead.")
+    while True:
+        reload = input("Do you want to load a saved grid? (y/n): ").strip().lower()
+        if reload == 'y':
+            grid = load_grid()
+            time.sleep(1.5)
+            if grid is False:
+                print("This grid is stuck on a loop. Creating a new grid instead.")
+                grid = create_grid()
+                break
+            elif grid is None:
+                print("No grid has been saved. Creating a new grid instead.")
+                grid = create_grid()
+                break
+        elif reload == 'n':
             grid = create_grid()
-    else:
-        grid = create_grid()
-        
+            break
+        else :
+            print("Invalid input. Please retry.")
+            grid = create_grid()
+            
     seen = {}
     turn = 0
-
     while True:
         os.system("cls" if os.name == "nt" else "clear")
 
@@ -29,6 +38,7 @@ def main():
         loop, start, period = detect_loop(seen, grid, turn)
         if loop:
             print(f"Loop detected! Start at turn {start}, period = {period} turns")
+            save_grid(False)
             break  
 
         grid = next_generation(grid)
