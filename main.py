@@ -25,10 +25,10 @@ def main():
             break
         else :
             print("Invalid input. Please retry.")
-            grid = create_grid()
             
     seen = {}
     turn = 0
+    
     while True:
         os.system("cls" if os.name == "nt" else "clear")
 
