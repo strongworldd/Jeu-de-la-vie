@@ -1,6 +1,3 @@
-from cell_state import next_generation
-from create_grid import create_grid, printgrid
-
 def state_key(grid):
     return tuple(tuple(row) for row in grid)
 
