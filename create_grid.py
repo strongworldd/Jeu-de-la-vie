@@ -9,8 +9,7 @@ def printgrid(grid):
 def create_grid():
     
     grid=[]
-    
-    
+     
     while True:
         try:
             size = int (input ("Choose the size of the grid (5-40):"))
