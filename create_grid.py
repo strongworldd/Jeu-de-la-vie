@@ -13,8 +13,8 @@ def create_grid():
     
     while True:
         try:
-            size = int (input ("Choose the size of the grid (3-50):"))
-            if size < 3 or size > 50:
+            size = int (input ("Choose the size of the grid (5-40):"))
+            if size < 5 or size > 40:
                 print ("Invalid Number")
             else:
                 break

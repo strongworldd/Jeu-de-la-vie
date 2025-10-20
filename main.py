@@ -15,12 +15,12 @@ def main():
             if grid is False:
                 print("This grid is stuck on a loop. Creating a new grid instead.")
                 grid = create_grid()
-                break
             elif grid is None:
                 print("No grid has been saved. Creating a new grid instead.")
                 grid = create_grid()
-                break
+            break
         elif reload == 'n':
+            print("You chose to not load a saved grid. Creating a new grid instead.")
             grid = create_grid()
             break
         else :
@@ -46,7 +46,7 @@ def main():
         
         save_grid(grid)
 
-        time.sleep(0.4)
+        time.sleep(0.2)
         
 
 if __name__ == "__main__":
