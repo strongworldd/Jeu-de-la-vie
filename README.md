@@ -2,9 +2,8 @@
 
 ## Règles
 - Soit une grille de `n` lignes et `n` colonnes
-- Chaque cellule vaut soit `True` (vivant) ou `False` (mort)
+- Chaque cellule vaut soit `1` (vivant) ou `0` (mort)
 - A chaque itération les cellules évoluent selon l'état de leurs voisons directs.
-  - Le voisinage considéré est un voisinage de Moore (8 voisins).
 - Les règles de transition sont faites en fonction de l’état de la cellule et de son nombre `v` de voisins vivants :
   - si `v < 2` l’état suivant est : Mort
   - si `v == 2` la cellule ne change pas d’état
