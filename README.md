@@ -17,7 +17,7 @@
 - **Génération de grille** aléatoire avec une taille choisie par l’utilisateur.  
 - **Évolution automatique** à chaque tour avec affichage animé.  
 - **Détection de boucles** pour identifier les motifs répétitifs.  
-- **Sauvegarde et reprise** d’une partie.
+- **Sauvegarde et reprise** d’une partie (Ctrl+C pour quitter une partie en cours)
 
 ---
 
