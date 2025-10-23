@@ -17,7 +17,7 @@ def main():
                 print("This grid is stuck on a loop. Creating a new grid instead.")
                 grid = create_grid()
                 turn = 0
-            elif grid or turn is None:
+            elif grid is None or turn is None:
                 print("The grid or the number of turns hasn't been saved. Creating a new grid instead.")
                 grid = create_grid()
                 turn = 0
